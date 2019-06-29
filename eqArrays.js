@@ -1,3 +1,4 @@
+
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -10,23 +11,23 @@ const assertEqual = function(actual, expected) {
 
 
 let eqArrays = function (array1, array2) {
-  
   if (array1.length !== array2.length) {
+    //console.log('not equal')
     return false;
+  } else {
+    for (let i = 0; i < array1.length; i++) {
+      if (array1[i] !== array2[i]) {
+        //console.log('not equal');   
+        return false;    
+      } 
+    }
   }
-  
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    } 
-  }
+  //console.log('equal');
   return true;  
 };
 
 // TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp"), false;
-assertEqual(1, 1), true;
-assertEqual(5, "5"), false;
-assertEqual("Hello", "hello"), false;
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
 assertEqual(eqArrays([1,2,3], [3,2,1]), false);
+assertEqual(eqArrays([1,2,3], [1,2,4,5]), false);
+assertEqual(eqArrays([], [1,2,4,5]), false);
