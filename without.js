@@ -41,16 +41,13 @@ let without = function(source, itemsToRemove) {
       }
     }
     if (noPush === false) {
-      newArray.push(source[s])
+      newArray.push(source[s]);
     }
   }
   return newArray;
 };
 
-//let source = [1,2,3];
-//let itemsToRemove = [1];
-
-let source = [1,2,3,4,5]
-let itemsToRemove = [1,3,5]
+let source = [1,2,3,4,5];
+let itemsToRemove = [1,3,5];
 console.log('test', without(source,itemsToRemove));
 

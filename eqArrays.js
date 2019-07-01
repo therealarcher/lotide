@@ -10,20 +10,20 @@ const assertEqual = function(actual, expected) {
 // check each element of the same index between 2 arrays
 
 
-let eqArrays = function (array1, array2) {
+let eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     //console.log('not equal')
     return false;
   } else {
     for (let i = 0; i < array1.length; i++) {
       if (array1[i] !== array2[i]) {
-        //console.log('not equal');   
-        return false;    
-      } 
+        //console.log('not equal');
+        return false;
+      }
     }
   }
   //console.log('equal');
-  return true;  
+  return true;
 };
 
 module.exports = eqArrays;

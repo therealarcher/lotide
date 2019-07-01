@@ -15,7 +15,7 @@ const assertEqual = function(actual, expected) {
 // when value === value of something in object, return object.key
 // if value not found in object keys, return "undefined"
 
-const bestTVShowsByGenre = { 
+const bestTVShowsByGenre = {
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama: "The Wire"
@@ -23,20 +23,20 @@ const bestTVShowsByGenre = {
 
 const findKeyByValue = function(object, value) {
   //console.log(Object.keys(object));
-  for (genre in object) {
+  for (let genre in object) {
     // console.log (genre);
     // console.log(object[genre]);
     if (object[genre] === value) {
       //console.log(genre);
       return genre;
-    } 
+    }
   }
 };
 
 
-findKeyByValue(bestTVShowsByGenre, "The Expanse")
+findKeyByValue(bestTVShowsByGenre, "The Expanse");
 
 // TEST CODE
- assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
- assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
- assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), "comedy");
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), "comedy");

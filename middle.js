@@ -30,13 +30,13 @@ const middle = function(array) {
     return [];
   } else if (array.length % 2 === 0) {
     let evenIndexStart = (array.length / 2 - 1);
-    let evenIndexEnd = (array.length /2);
+    let evenIndexEnd = (array.length / 2);
     return [array[evenIndexStart], array[evenIndexEnd]];
   } else {
     let middleIndex = Math.floor(array.length / 2);
     return [array[middleIndex]];
-  };
-}
+  }
+};
 
 
 // middle([1,2,3,4]);
