@@ -1,29 +1,32 @@
-
-let eqArrays = function (array1, array2) {
+const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
+    //console.log('not equal')
     return false;
   }
   
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i]) {
-      console.log('The two arrays are not equal.')
+      //console.log('not equal')
       return false;
-    } 
+    }
   }
-  console.log('The two arrays are equal.')
+  //console.log('equal')
   return true;
 };
 
-let assertArraysEqual = function(array1, array2) {
+const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2) === true) {
-    console.log(`✅✅✅ Assertion Passed: [${array1}] === [${array2}]`);
+    console.log(`✅✅✅ The arrays [${array1}] and [${array2}] are equal.`);
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed: [${array1}] !== [${array2}]`);
+    console.log(`🛑🛑🛑 the arrays [${array1}]  and [${array2}] are not equal.`);
   }
-}
+};
+
+module.exports = assertArraysEqual;
 
 // TEST CODE
-assertArraysEqual([1,2,3], [1,2,3]);
-assertArraysEqual([1,2,3],[3,2,1]);
-assertArraysEqual([1,2], [1,2,3,4]);
-assertArraysEqual([],[1]);
+// eqArrays(assertArraysEqual([1,2,3], [1,2,3]), true);
+// eqArrays([1,2,3], [2,2,3,4]);
+// assertArraysEqual([1,2,3],[1,2,3]);
+// assertArraysEqual([1,2], [1,2,3,4]);
+// assertArraysEqual([],[1]);
