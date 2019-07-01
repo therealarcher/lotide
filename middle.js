@@ -39,14 +39,12 @@ const middle = function(array) {
 }
 
 
-middle([1,2,3,4]);
-middle([1,2,3,4,5,6]);
-middle([1,3,5,7,9]);
-assertArraysEqual(middle([1,2,3,4]), [2,3]);
-assertArraysEqual(middle([1,2,3,4,7]), [3]);
+// middle([1,2,3,4]);
+// middle([1,2,3,4,5,6]);
+// middle([1,3,5,7,9]);
 
-// TEST CODE
-//assertArraysEqual([1,2,3], [1,2,3]);
-//assertArraysEqual([1,2,3],[3,2,1]);
-//assertArraysEqual([1,2], [1,2,3,4]);
-//assertArraysEqual([],[1]);
+module.exports = middle;
+
+// // TEST CODE
+// assertArraysEqual(middle([1,2,3,4]), [2,3]);
+// assertArraysEqual(middle([1,2,3,4,7]), [3]);
